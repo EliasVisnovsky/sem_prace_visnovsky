@@ -1,0 +1,75 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="semestralni_prace_visnovsky_avalon.AddTransactionWindow"
+        Title="Nová transakce" Width="420" Height="520"
+        Background="#09090B" Foreground="#FAFAFA"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False">
+
+    <Window.Styles>
+        <Style Selector="TextBox, ComboBox, CalendarDatePicker">
+            <Setter Property="Background" Value="#18181B"/>
+            <Setter Property="Foreground" Value="#FAFAFA"/>
+            <Setter Property="BorderBrush" Value="#27272A"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="Margin" Value="0,0,0,20"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        </Style>
+
+        <Style Selector="TextBlock.label">
+            <Setter Property="Foreground" Value="#A1A1AA"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,0,8"/>
+        </Style>
+
+        <Style Selector="Button.primary">
+            <Setter Property="Background" Value="#FAFAFA"/>
+            <Setter Property="Foreground" Value="#09090B"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="20,12"/>
+        </Style>
+
+        <Style Selector="Button.secondary">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#A1A1AA"/>
+            <Setter Property="BorderBrush" Value="#27272A"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="20,12"/>
+        </Style>
+    </Window.Styles>
+
+    <Grid Margin="30" RowDefinitions="Auto, *, Auto">
+        
+        <TextBlock Grid.Row="0" Text="PŘIDAT TRANSAKCI" FontSize="14" FontWeight="Bold" 
+                   LetterSpacing="1" Foreground="#FAFAFA" HorizontalAlignment="Center" Margin="0,0,0,30"/>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock Classes="label" Text="ČÁSTKA (Kč)"/>
+            <TextBox x:Name="txtAmount" Watermark="Např. -150 nebo 2000" />
+
+            <TextBlock Classes="label" Text="KATEGORIE"/>
+            <ComboBox x:Name="cmbCategory" IsEditable="True" IsTextSearchEnabled="True" 
+                      PlaceholderText="Vyberte nebo napište..."/>
+
+            <TextBlock Classes="label" Text="POZNÁMKA"/>
+            <TextBox x:Name="txtNote" Watermark="Za co to bylo?"/>
+
+            <TextBlock Classes="label" Text="DATUM"/>
+            <Grid ColumnDefinitions="*, Auto, Auto">
+                <CalendarDatePicker x:Name="dpDate" Grid.Column="0" Margin="0,0,10,20" Watermark="Zvolte datum"/>
+                <Button Grid.Column="1" Classes="secondary" Content="Dnes" Margin="0,0,10,20" Click="BtnToday_Click"/>
+                <Button Grid.Column="2" Classes="secondary" Content="Včera" Margin="0,0,0,20" Click="BtnYesterday_Click"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Classes="secondary" Content="Zrušit" Margin="0,0,15,0" Click="BtnCancel_Click"/>
+            <Button Classes="primary" Content="Uložit transakci" Click="BtnSave_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

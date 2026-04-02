@@ -1,0 +1,183 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="semestralni_prace_visnovsky_avalon.MainWindow"
+        Title="Můj Správce Financí" Width="1050" Height="750"
+        Background="#09090B" Foreground="#FAFAFA"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Styles>
+        
+        <Style Selector="Border.Card">
+            <Setter Property="Background" Value="#0E0E0F"/>
+            <Setter Property="BorderBrush" Value="#313133"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="16"/>
+        </Style>
+
+        <Style Selector="TextBlock.SectionTitle">
+            <Setter Property="Foreground" Value="#A1A1AA"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style Selector="Button.primary">
+            <Setter Property="Background" Value="#FAFAFA"/>
+            <Setter Property="Foreground" Value="#09090B"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="20,12"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <Style Selector="Button.secondary">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#A1A1AA"/>
+            <Setter Property="BorderBrush" Value="#27272A"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="20,12"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <Style Selector="RadioButton.tab">
+            <Setter Property="Foreground" Value="#A1A1AA"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="15,10"/>
+            <Setter Property="Margin" Value="0,0,20,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        <Style Selector="RadioButton.tab:checked">
+            <Setter Property="Foreground" Value="#FAFAFA"/>
+        </Style>
+
+    </Window.Styles>
+
+    <Grid Margin="40" RowDefinitions="Auto, Auto, Auto, *, Auto">
+    
+        <Grid Grid.Row="0" ColumnDefinitions="*, 400" Margin="0,0,0,30">
+            
+            <Border Grid.Column="0" Classes="Card" Padding="40" Margin="0,0,20,0" VerticalAlignment="Stretch">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Classes="SectionTitle" Text="CELKOVÝ ZŮSTATEK" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                    <TextBlock x:Name="txtBalance" Text="0 Kč" FontSize="64" FontWeight="Light" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" Classes="Card" Padding="20">
+                <Grid RowDefinitions="Auto, *">
+                    <StackPanel Grid.Row="0" Margin="0,0,0,15">
+                          <TextBlock Classes="SectionTitle" Text="ZA CO UTRÁCÍM" FontSize="14" FontWeight="Bold" Margin="0,0,0,2"/>
+                          <TextBlock Text="Celkový přehled" Foreground="#52525B" FontSize="11" FontWeight="Medium"/>
+                    </StackPanel>                    
+                    <ScrollViewer Grid.Row="1" MaxHeight="150" HorizontalScrollBarVisibility="Disabled">
+                        <ItemsControl x:Name="listStatistics">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid ColumnDefinitions="100, *, 80" Margin="0,0,0,15">
+                                        <TextBlock Grid.Column="0" Text="{Binding Name}" Foreground="#FAFAFA" FontSize="13" VerticalAlignment="Center"/>
+                                        <ProgressBar Grid.Column="1" Value="{Binding Percentage}" Foreground="{Binding Color}" 
+                                                     Background="#27272A" Height="8" CornerRadius="4" VerticalAlignment="Center" Margin="10,0"/>
+                                        <TextBlock Grid.Column="2" Text="{Binding FormattedAmount}" Foreground="#A1A1AA" FontSize="13" FontWeight="SemiBold" 
+                                                   HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+            <RadioButton x:Name="tab7Days" Classes="tab" Content="Posledních 7 dní" IsChecked="True" IsCheckedChanged="Tab_Checked"/>
+            <RadioButton x:Name="tabAll" Classes="tab" Content="Všechny výdaje" IsCheckedChanged="Tab_Checked"/>
+        </StackPanel>
+
+        <Border Grid.Row="2" Classes="Card" Padding="15,10" Margin="0,0,0,15" IsVisible="{Binding #tabAll.IsChecked}">
+            <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                
+                <StackPanel Margin="0,0,15,5">
+                    <TextBlock Classes="SectionTitle" Text="KATEGORIE" FontSize="10" Margin="0,0,0,2"/>
+                    <ComboBox x:Name="cmbFilterCategory" Width="120" Padding="8,6" FontSize="12" PlaceholderText="Všechny"/>
+                </StackPanel>
+
+                <StackPanel Margin="0,0,15,5">
+                    <TextBlock Classes="SectionTitle" Text="OD" FontSize="10" Margin="0,0,0,2"/>
+                    <CalendarDatePicker x:Name="dpFilterFrom" Width="110" Padding="8,6" FontSize="12" Watermark="Od..."/>
+                </StackPanel>
+
+                <StackPanel Margin="0,0,15,5">
+                    <TextBlock Classes="SectionTitle" Text="DO" FontSize="10" Margin="0,0,0,2"/>
+                    <CalendarDatePicker x:Name="dpFilterTo" Width="110" Padding="8,6" FontSize="12" Watermark="Do..."/>
+                </StackPanel>
+
+                <StackPanel Margin="0,0,15,5">
+                    <TextBlock Classes="SectionTitle" Text="ČÁSTKA (OD-DO)" FontSize="10" Margin="0,0,0,2"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="txtFilterMin" Width="60" Padding="8,6" FontSize="12" Watermark="Min" Margin="0,0,5,0"/>
+                        <TextBox x:Name="txtFilterMax" Width="60" Padding="8,6" FontSize="12" Watermark="Max"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0,0,15,5">
+                    <TextBlock Classes="SectionTitle" Text="SEŘADIT" FontSize="10" Margin="0,0,0,2"/>
+                    <ComboBox x:Name="cmbSortOrder" Width="120" Padding="8,6" FontSize="12">
+                        <ComboBoxItem Content="Nejnovější"/>
+                        <ComboBoxItem Content="Nejstarší"/>
+                        <ComboBoxItem Content="Nejvyšší"/>
+                        <ComboBoxItem Content="Nejnižší"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <Button Content="Použít" Classes="primary" Padding="12,6" FontSize="12" Margin="0,0,10,0" Click="BtnApplyFilter_Click"/>
+                    <Button Content="Zrušit" Classes="secondary" Padding="12,6" FontSize="12" Click="BtnResetFilter_Click"/>
+                </StackPanel>
+                
+            </WrapPanel>
+        </Border>
+
+        <Border Grid.Row="3" Classes="Card" Padding="10">
+            <DataGrid x:Name="gridTransactions" AutoGenerateColumns="False" IsReadOnly="True" 
+                      Background="Transparent" GridLinesVisibility="None" HeadersVisibility="None" RowHeight="60" BorderThickness="-2">
+                <DataGrid.Columns>
+                    
+                    <DataGridTextColumn Binding="{Binding DateAndTime, StringFormat={}{0:dd. MM. yyyy}}" Width="120"/>
+                    
+                    <DataGridTemplateColumn Width="150">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Border Background="{Binding Category.Color, FallbackValue='#27272A'}" CornerRadius="12" Padding="10,5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Category.Name}" Foreground="#FAFAFA" FontSize="12" FontWeight="SemiBold"/>
+                                </Border>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTextColumn Binding="{Binding Note}" Width="*"/>
+
+                    <DataGridTemplateColumn Width="Auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding FormattedAmount}" 
+                                           Foreground="{Binding AmountColor}" 
+                                           FontWeight="SemiBold" 
+                                           VerticalAlignment="Center" 
+                                           HorizontalAlignment="Right" 
+                                           Margin="0,0,20,0"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,30,0,0">
+            <Button x:Name="btnExit" Classes="secondary" Content="Uložit a Zavřít" Margin="0,0,15,0" Click="BtnExit_Click"/>
+            <Button x:Name="btnAdd" Classes="primary" Content="+ Přidat transakci" Click="BtnAdd_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
