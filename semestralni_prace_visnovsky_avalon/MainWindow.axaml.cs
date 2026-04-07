@@ -14,14 +14,35 @@ namespace semestralni_prace_visnovsky_avalon
         {
             InitializeComponent();
             manager = new FinanceManager();
+            RefreshAccountsCombo();
             RefreshUI();
         }
 
         public void RefreshUI()
         {
-            if (manager.Accounts.Count > 0)
+            string selectedAccName = cmbAccounts.Text;
+
+            if(string.IsNullOrWhiteSpace(selectedAccName) && manager.Accounts.Count > 0)
             {
-                txtBalance.Text = manager.Accounts[0].CurrentBalance.ToString("N0") + " Kč";
+                selectedAccName = manager.Accounts[0].Name;
+                cmbAccounts.SelectedItem = selectedAccName;
+                cmbAccounts.Text = selectedAccName;
+            }
+
+            bool accountFound = false;
+            foreach(var acc in manager.Accounts)
+            {
+                if(acc.Name == selectedAccName)
+                {
+                    txtBalance.Text = acc.CurrentBalance.ToString("N0") + " Kč";
+                    accountFound = true;
+                    break;
+                }
+            }
+
+            if (accountFound == false)
+            {
+                txtBalance.Text = "0 Kč";
             }
 
             if (cmbFilterCategory != null)
@@ -39,7 +60,10 @@ namespace semestralni_prace_visnovsky_avalon
                 cmbSortOrder.SelectedIndex = 0;
             }
 
-            if (tab7Days == null || gridTransactions == null) return;
+            if (tab7Days == null || gridTransactions == null)
+            {
+                return;
+            }
 
             if (tab7Days.IsChecked == true)
             {
@@ -51,6 +75,67 @@ namespace semestralni_prace_visnovsky_avalon
             }
 
             UpdateStatistics();
+            
+        }
+
+        private void RefreshAccountsCombo()
+        {
+            List<String> names = new List<string>();
+            foreach(var a in manager.Accounts)
+            {
+                names.Add(a.Name);
+            }
+            cmbAccounts.ItemsSource = names;
+
+            if(cmbAccounts.SelectedIndex == -1 && names.Count > 0)
+            {
+                cmbAccounts.SelectedIndex = 0;
+            }
+        }
+
+        private void BtnAddAccount_Click(object sender, RoutedEventArgs e)
+        {
+            string newName = cmbAccounts.Text;
+
+            if (!string.IsNullOrEmpty(newName))
+            {
+                bool alreadyExists = false;
+                foreach(var acc in manager.Accounts)
+                {
+                    if(acc.Name.ToLower() == newName.ToLower())
+                    {
+                        alreadyExists = true;
+                        break;
+                    }
+                }
+
+                if(alreadyExists == false)
+                {
+                    manager.Accounts.Add(new Account { 
+                        Id = manager.Accounts.Count + 1,
+                        Name = newName,
+                        CurrentBalance = 0
+                    });
+
+                    RefreshAccountsCombo();
+                }
+
+                cmbAccounts.SelectedItem = newName;
+                RefreshUI();
+            }
+            else
+            {
+                if(manager.Accounts.Count > 0)
+                {
+                    cmbAccounts.SelectedIndex = 0;
+                    cmbAccounts.Text = manager.Accounts[0].Name;
+                }
+            }
+        }
+
+        private void CmbAccounts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RefreshUI(); 
         }
 
         private void UpdateStatistics()
@@ -58,8 +143,15 @@ namespace semestralni_prace_visnovsky_avalon
             List<CategoryStat> stats = new List<CategoryStat>();
             decimal totalExpenses = 0;
 
+            string selectedAcc = cmbAccounts.Text;
+
             foreach (var t in manager.Transactions)
             {
+
+                if (t.Account.Name.ToLower() != selectedAcc.ToLower())
+                {
+                    continue;
+                }
 
                 if (t.Amount < 0)
                 {
@@ -116,8 +208,15 @@ namespace semestralni_prace_visnovsky_avalon
             DateTime sevenDaysAgo = DateTime.Now.Date.AddDays(-7);
             List<Transaction> filtered = new List<Transaction>();
 
+            string selectedAcc = cmbAccounts.Text;
+
             foreach (var t in manager.Transactions)
             {
+                if (t.Account.Name.ToLower() != selectedAcc.ToLower())
+                {
+                    continue;
+                }
+
                 if (t.DateAndTime.Date >= sevenDaysAgo)
                 {
                     filtered.Add(t);
@@ -130,7 +229,18 @@ namespace semestralni_prace_visnovsky_avalon
 
         private void LoadAllData()
         {
-            List<Transaction> all = new List<Transaction>(manager.Transactions);
+            List<Transaction> all = new List<Transaction>();
+
+            string selectedAcc = cmbAccounts.Text;
+
+            foreach (var t in manager.Transactions)
+            {
+                if (t.Account.Name.ToLower() != selectedAcc.ToLower())
+                {
+                    continue;
+                }
+                all.Add(t);
+            }
 
             all.Sort((x, y) => y.DateAndTime.CompareTo(x.DateAndTime));
 
@@ -150,16 +260,46 @@ namespace semestralni_prace_visnovsky_avalon
             decimal maxAmt;
             bool hasMax = decimal.TryParse(txtFilterMax.Text, out maxAmt);
 
+            string selectedAcc = cmbAccounts.Text;
+
             foreach (var t in manager.Transactions)
             {
-                bool matches = true;
-                if (selCat != null && t.Category.Name != selCat) matches = false;
-                if (dateFrom != null && t.DateAndTime.Date < dateFrom.Value.Date) matches = false;
-                if (dateTo != null && t.DateAndTime.Date > dateTo.Value.Date) matches = false;
-                if (hasMin && t.Amount < minAmt) matches = false;
-                if (hasMax && t.Amount > maxAmt) matches = false;
+                if (t.Account.Name.ToLower() != selectedAcc.ToLower())
+                {
+                    continue;
+                }
 
-                if (matches) filteredList.Add(t);
+                bool matches = true;
+                if (selCat != null && t.Category.Name != selCat)
+                {
+                    matches = false;
+                }
+
+                if (dateFrom != null && t.DateAndTime.Date < dateFrom.Value.Date)
+                {
+                    matches = false;
+                }
+
+                if (dateTo != null && t.DateAndTime.Date > dateTo.Value.Date)
+                {
+                    matches = false;
+                }
+
+                if (hasMin && t.Amount < minAmt)
+                {
+                    matches = false;
+                }
+
+                if (hasMax && t.Amount > maxAmt)
+                {
+                    matches = false;
+                }
+
+                if (matches)
+                {
+                    filteredList.Add(t);
+                }
+
             }
 
             if (cmbSortOrder.SelectedIndex == 0) filteredList.Sort((x, y) => y.DateAndTime.CompareTo(x.DateAndTime));
@@ -190,7 +330,24 @@ namespace semestralni_prace_visnovsky_avalon
 
         private async void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            AddTransactionWindow addWindow = new AddTransactionWindow(manager);
+            string selectedAcc = cmbAccounts.Text;
+            Account selectedAccount = null;
+
+            foreach(var acc in manager.Accounts)
+            {
+                if(acc.Name == selectedAcc)
+                {
+                    selectedAccount = acc;
+                    break;
+                }
+            }
+
+            if(selectedAccount == null && manager.Accounts.Count > 0)
+            {
+                selectedAccount = manager.Accounts[0];
+            }
+
+            AddTransactionWindow addWindow = new AddTransactionWindow(manager, selectedAccount);
 
             var result = await addWindow.ShowDialog<bool>(this);
 
@@ -207,11 +364,4 @@ namespace semestralni_prace_visnovsky_avalon
         }
     }
 
-    public class CategoryStat
-    {
-        public string Name { get; set; }
-        public string Color { get; set; }
-        public string FormattedAmount { get; set; }
-        public double Percentage { get; set; } 
-    }
 }

@@ -1,5 +1,6 @@
-27.03.2026 0:00:00;2500;Mamka - měsíční kapesné;Kapesné;#F59E0B
-31.03.2026 0:00:00;-170;Kebab;Jídlo;#8B5CF6
-14.03.2026 0:00:00;-750;výlet - Praha;Zábava;#EF4444
-01.04.2026 0:00:00;6500;;Brigáda;#3B82F6
-14.04.2026 0:00:00;-650;Večeře - Anami;Jídlo;#8B5CF6
+01.04.2026 0:00:00;6500;;brigáda;#F59E0B;Běžný účet
+05.04.2026 0:00:00;-620;Večeře v Yobi;Jídlo;#8B5CF6;Běžný účet
+28.03.2026 0:00:00;3500;hotovost co jsem už měl ;Bez kategorie;#EF4444;Hotovost v peněžence
+05.04.2026 0:00:00;-510;benzín;brigáda;#F59E0B;Hotovost v peněžence
+06.04.2026 0:00:00;200;našel jsem na zemi;Bez kategorie;#EF4444;Hotovost v peněžence
+06.04.2026 0:00:00;-350;pivo.;Zábava;#3B82F6;Běžný účet

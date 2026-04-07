@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|solutionrelative:semestralni_prace_visnovsky_avalon\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|solutionrelative:semestralni_prace_visnovsky_avalon\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|solutionrelative:semestralni_prace_visnovsky_avalon\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\addtransactionwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
@@ -23,6 +23,14 @@
       "RelativeMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|solutionrelative:semestralni_prace_visnovsky_avalon\\financemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|solutionrelative:semestralni_prace_visnovsky_avalon\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\categorystat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|solutionrelative:semestralni_prace_visnovsky_avalon\\categorystat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|solutionrelative:semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -33,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|solutionrelative:semestralni_prace_visnovsky_avalon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|solutionrelative:semestralni_prace_visnovsky_avalon\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABFC2748-431F-6E68-5521-81CE2D4715B4}|semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj|c:\\users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,8 +58,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CategoryStat.cs",
+              "DocumentMoniker": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\CategoryStat.cs",
+              "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\CategoryStat.cs",
+              "ToolTip": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\CategoryStat.cs",
+              "RelativeToolTip": "semestralni_prace_visnovsky_avalon\\CategoryStat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T14:55:15.971Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -76,14 +93,14 @@
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\AddTransactionWindow.axaml.cs",
               "ToolTip": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\AddTransactionWindow.axaml.cs",
               "RelativeToolTip": "semestralni_prace_visnovsky_avalon\\AddTransactionWindow.axaml.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAqwGwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-30T11:35:54.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "semestralni_prace_visnovsky_avalon.csproj",
               "DocumentMoniker": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj",
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon.csproj",
@@ -95,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "App.axaml",
               "DocumentMoniker": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\App.axaml",
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\App.axaml",
@@ -112,14 +129,14 @@
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\FinanceManager.cs",
               "ToolTip": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\FinanceManager.cs",
               "RelativeToolTip": "semestralni_prace_visnovsky_avalon\\FinanceManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAawIwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-30T10:03:58.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Transaction.cs",
               "DocumentMoniker": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\Transaction.cs",
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\Transaction.cs",
@@ -131,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\Category.cs",
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\Category.cs",
@@ -143,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\Account.cs",
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\Account.cs",
@@ -151,11 +168,12 @@
               "RelativeToolTip": "semestralni_prace_visnovsky_avalon\\Account.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T10:03:00.111Z"
+              "WhenOpened": "2026-03-30T10:03:00.111Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\Program.cs",
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\Program.cs",
@@ -167,25 +185,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\MainWindow.axaml",
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\MainWindow.axaml",
-              "ToolTip": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\MainWindow.axaml*",
-              "RelativeToolTip": "semestralni_prace_visnovsky_avalon\\MainWindow.axaml*",
+              "ToolTip": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\MainWindow.axaml",
+              "RelativeToolTip": "semestralni_prace_visnovsky_avalon\\MainWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-03-30T10:17:58.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "semestralni_prace_visnovsky_avalon\\MainWindow.axaml.cs",
               "ToolTip": "C:\\Users\\42077\\source\\repos\\semestralni_prace_visnovsky_avalon\\semestralni_prace_visnovsky_avalon\\MainWindow.axaml.cs",
               "RelativeToolTip": "semestralni_prace_visnovsky_avalon\\MainWindow.axaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoBAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-30T09:54:56.274Z",
               "EditorCaption": ""

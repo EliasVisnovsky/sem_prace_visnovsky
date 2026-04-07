@@ -72,3 +72,4 @@ C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.pdb
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.genruntimeconfig.cache
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\ref\semestralni_prace_visnovsky_avalon.dll
+C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.sourcelink.json

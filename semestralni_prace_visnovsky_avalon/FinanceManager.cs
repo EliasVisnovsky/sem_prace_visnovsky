@@ -30,7 +30,7 @@ public class FinanceManager
 
         foreach (Transaction trn in Transactions)
         {
-            string line = $"{trn.DateAndTime};{trn.Amount};{trn.Note};{trn.Category.Name};{trn.Category.Color}";
+            string line = $"{trn.DateAndTime};{trn.Amount};{trn.Note};{trn.Category.Name};{trn.Category.Color};{trn.Account.Name}";
             lines.Add(line);
 
         }
@@ -43,7 +43,7 @@ public class FinanceManager
         if (File.Exists(filePath))
         {
             string[] lines = File.ReadAllLines(filePath);
-            Account myAccount = Accounts[0];
+            
 
             string[] selectedColors = { "#EF4444", "#3B82F6", "#10B981", "#F59E0B", "#8B5CF6", "#EC4899", "#06B6D4" };
 
@@ -99,6 +99,33 @@ public class FinanceManager
                         Categories.Add(searchedCategory);
                     }
 
+                    string accName = "Běžný účet";
+                    if(parts.Length >= 6)
+                    {
+                        accName = parts[5];
+                    }
+
+                    Account transAccount = null;
+                    foreach (var a in Accounts)
+                    {
+                        if(a.Name == accName)
+                        {
+                            transAccount = a;
+                            break;
+                        }
+                    }
+
+                    if(transAccount == null)
+                    {
+                        transAccount = new Account
+                        {
+                            Id = Accounts.Count + 1,
+                            Name = accName,
+                            CurrentBalance = 0
+                        };
+                        Accounts.Add(transAccount);
+                    }
+
                   
 
                     Transaction t = new Transaction
@@ -106,12 +133,12 @@ public class FinanceManager
                         DateAndTime = date,
                         Amount = amount,
                         Note = note,
-                        Account = myAccount,
+                        Account = transAccount,
                         Category = searchedCategory
                     };
 
                     Transactions.Add(t);
-                    myAccount.CurrentBalance += amount;
+                    transAccount.CurrentBalance += amount;
                 }
             }
         }

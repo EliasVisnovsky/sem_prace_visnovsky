@@ -9,16 +9,18 @@ namespace semestralni_prace_visnovsky_avalon;
 public partial class AddTransactionWindow : Window
 {
     private FinanceManager manager;
+    private Account activeAccount;
     public AddTransactionWindow()
     {
 
         InitializeComponent();
 
     }
-    public AddTransactionWindow(FinanceManager manager) : this()
+    public AddTransactionWindow(FinanceManager manager, Account currentAccount) : this()
 
     {
         this.manager = manager;
+        this.activeAccount = currentAccount;
 
         List<string> categoryNames = new List<string>();
         foreach (var c in manager.Categories)
@@ -59,7 +61,7 @@ public partial class AddTransactionWindow : Window
 
         if (string.IsNullOrWhiteSpace(catName))
         {
-            return;
+            catName = "Bez kategorie";
         }
 
         Category category = null;
@@ -74,6 +76,13 @@ public partial class AddTransactionWindow : Window
 
         if (category == null)
         {
+            string autoColor;
+
+            if(catName == "Bez kategorie")
+            {
+                autoColor = "#27272A";
+            }
+
             string[] categoryColor = {
             "#F59E0B",
             "#8B5CF6",
@@ -85,7 +94,7 @@ public partial class AddTransactionWindow : Window
         };
 
             int colorIndex = manager.Categories.Count % categoryColor.Length;
-            string autoColor = categoryColor[colorIndex];
+            autoColor = categoryColor[colorIndex];
 
             category = new Category
             {
@@ -106,11 +115,11 @@ public partial class AddTransactionWindow : Window
             DateAndTime = selectedDate,
             Note = txtNote.Text,
             Category = category,
-            Account = manager.Accounts[0]
+            Account = activeAccount
         };
 
         manager.Transactions.Add(newTransaction);
-        manager.Accounts[0].CurrentBalance += amount;
+        activeAccount.CurrentBalance += amount;
 
         Close(true);
     }
