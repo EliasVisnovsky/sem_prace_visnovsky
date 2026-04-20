@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("semestralni_prace_visnovsky_avalon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fce9ad3f2e98dd2c698c9269b23b2b3eaf2a20f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7979b755995084c7eca877d3277404ce081d7963")]
 [assembly: System.Reflection.AssemblyProductAttribute("semestralni_prace_visnovsky_avalon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("semestralni_prace_visnovsky_avalon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

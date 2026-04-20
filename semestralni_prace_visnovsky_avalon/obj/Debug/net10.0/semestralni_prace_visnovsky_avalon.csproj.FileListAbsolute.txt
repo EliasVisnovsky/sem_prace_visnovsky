@@ -28,9 +28,14 @@ C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\Avalonia.Win32.Automation.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\Avalonia.Win32.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\Avalonia.X11.dll
+C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\CommunityToolkit.Mvvm.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\HarfBuzzSharp.dll
+C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\LiveChartsCore.dll
+C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\LiveChartsCore.SkiaSharpView.dll
+C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\MicroCom.Runtime.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\SkiaSharp.dll
+C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\SkiaSharp.HarfBuzz.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\Tmds.DBus.Protocol.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\runtimes\win-arm64\native\av_libglesv2.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\bin\Debug\net10.0\runtimes\win-x64\native\av_libglesv2.dll
@@ -66,10 +71,10 @@ C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.AssemblyInfoInputs.cache
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.AssemblyInfo.cs
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.csproj.CoreCompileInputs.cache
+C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.sourcelink.json
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestra.35349D36.Up2Date
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\refint\semestralni_prace_visnovsky_avalon.dll
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.pdb
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.genruntimeconfig.cache
 C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\ref\semestralni_prace_visnovsky_avalon.dll
-C:\Users\42077\source\repos\semestralni_prace_visnovsky_avalon\semestralni_prace_visnovsky_avalon\obj\Debug\net10.0\semestralni_prace_visnovsky_avalon.sourcelink.json

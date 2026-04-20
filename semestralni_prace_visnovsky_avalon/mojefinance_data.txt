@@ -1,6 +1,13 @@
-01.04.2026 0:00:00;6500;;brigáda;#F59E0B;Běžný účet
 05.04.2026 0:00:00;-620;Večeře v Yobi;Jídlo;#8B5CF6;Běžný účet
 28.03.2026 0:00:00;3500;hotovost co jsem už měl ;Bez kategorie;#EF4444;Hotovost v peněžence
 05.04.2026 0:00:00;-510;benzín;brigáda;#F59E0B;Hotovost v peněžence
 06.04.2026 0:00:00;200;našel jsem na zemi;Bez kategorie;#EF4444;Hotovost v peněžence
-06.04.2026 0:00:00;-350;pivo.;Zábava;#3B82F6;Běžný účet
+23.04.2026 0:00:00;-5100;Dovolená v Budapešti;Dovolená;#14B8A6;Běžný účet
+15.01.2026 0:00:00;-170;Kebab;Jídlo;#8B5CF6;Běžný účet
+13.04.2026 0:00:00;60000;;Bez kategorie;#EF4444;Běžný účet
+12.04.2026 0:00:00;-350;Tarif (Trvalá platba);Bez kategorie;#EF4444;Běžný účet
+12.05.2026 0:00:00;-350;Tarif (Trvalá platba);Bez kategorie;#EF4444;Běžný účet
+13.04.2026 0:00:00;-110;;Bez kategorie;#EF4444;Běžný účet
+13.04.2026 0:00:00;-120;;Bez kategorie;#EF4444;Běžný účet
+14.04.2026 0:00:00;-15000;Najem (Trvalá platba);Bydlení;#06B6D4;Běžný účet
+16.04.2026 0:00:00;20,55;;Bez kategorie;#EF4444;Běžný účet

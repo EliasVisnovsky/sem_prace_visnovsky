@@ -1,0 +1,8 @@
+Jídlo a pití;#EAB308
+Bydlení;#06B6D4
+Doprava;#64748B
+Zábava;#EC4899
+Příjem/Výplata;#14B8A6
+Jídlo;#8B5CF6
+Bez kategorie;#EF4444
+brigáda;#F59E0B

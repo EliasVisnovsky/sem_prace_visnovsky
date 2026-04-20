@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using System.Security.Principal;
 using System.Text;
+using CommunityToolkit.Mvvm.ComponentModel;
 
-public class Transaction
+public partial class Transaction : ObservableObject
 {
+    /*general*/
     public int Id { get; set; }
     public DateTime DateAndTime { get; set; }
-    public decimal Amount { get; set; }
     public string Note { get; set; }
-
     public Account Account { get; set; }
     public Category Category { get; set; }
 
+    /*Ttransaction edit - It shouts on axaml and changes the color and other thing immediately*/
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(AmountColor))]
+    [NotifyPropertyChangedFor(nameof(FormattedAmount))]
+    [NotifyPropertyChangedFor(nameof(IsIncome))]
+    private decimal _amount;
+
+    /*changes color to red or green*/
     public string AmountColor
     {
         get
@@ -28,6 +36,7 @@ public class Transaction
         }
     }
 
+    /*formats the number and adds + to the positive number*/
     public string FormattedAmount
     {
         get
