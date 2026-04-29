@@ -92,7 +92,7 @@ namespace semestralni_prace_visnovsky_avalon.ViewModels
             Account acc = null;
             foreach (var a in _manager.Accounts)
             {
-                if (a.Name.ToLower() == CurrentAccountName.ToLower())
+                if (a.Name == CurrentAccountName)
                 {
                     acc = a;
                     break; 
@@ -522,11 +522,11 @@ namespace semestralni_prace_visnovsky_avalon.ViewModels
                     Values = new double[] { (double)celkovaUtrata },
                     Name = kategorie.Name,
                     Fill = new SolidColorPaint(barvaGrafu),
-                    InnerRadius = 60,
+                    InnerRadius = 40,
                     HoverPushout = 10,
                     DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Middle, /*positions the text right in the middle of each part*/
                     DataLabelsPaint = new SolidColorPaint(SKColors.White),
-                    DataLabelsSize = 12,
+                    DataLabelsSize = 0,
                     DataLabelsFormatter = bodVGrafu => textProGraf
                 });
             }

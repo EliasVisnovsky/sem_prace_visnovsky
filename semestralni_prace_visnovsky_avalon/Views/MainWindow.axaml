@@ -4,7 +4,7 @@
         xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
         x:Class="semestralni_prace_visnovsky_avalon.MainWindow"
         x:DataType="vm:MainViewModel"
-        Title="Můj Správce Financí" Width="1250" Height="850"
+        Title="Můj Správce Financí" Width="1250" Height="780"
         Background="#09090B" Foreground="#FAFAFA"
         WindowStartupLocation="CenterScreen">
 
@@ -257,7 +257,7 @@
                             <CalendarDatePicker Grid.Column="0" SelectedDate="{Binding ExtendedVm.PieDateFrom}" Watermark="Od data" Background="#18181B" BorderBrush="#27272A" Margin="0,0,5,0" HorizontalAlignment="Stretch" CornerRadius="8"/>
                             <CalendarDatePicker Grid.Column="1" SelectedDate="{Binding ExtendedVm.PieDateTo}" Watermark="Do data" Background="#18181B" BorderBrush="#27272A" Margin="5,0,0,0" HorizontalAlignment="Stretch" CornerRadius="8"/>
                         </Grid>
-                        <lvc:PieChart Grid.Row="2" Series="{Binding ExtendedVm.PieSeries}" LegendPosition="Bottom" MinHeight="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        <lvc:PieChart Grid.Row="2" Series="{Binding ExtendedVm.PieSeries}" LegendPosition="Bottom" Height="250" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
                     </Grid>
                 </Border>
 

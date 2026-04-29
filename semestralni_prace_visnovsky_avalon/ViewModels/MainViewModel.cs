@@ -135,7 +135,7 @@ namespace semestralni_prace_visnovsky_avalon
             Account foundAccount = null;
             foreach (var acc in _manager.Accounts)
             {
-                if (acc.Name.ToLower() == SelectedAccountName.ToLower())
+                if (acc.Name == SelectedAccountName)
                 {
                     foundAccount = acc;
                     break;
